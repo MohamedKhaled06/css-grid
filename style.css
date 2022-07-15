@@ -1,0 +1,118 @@
+/* sets vars */
+:root {
+    /* primary colors */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* sec */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+/* sets vars */
+/* start global values */
+body {
+    height: 100%;
+    background-color: #edf2f8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* end global values */
+/* start styling */
+.main-flex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,250px); 
+    column-gap: 30px;
+    row-gap: 25px;
+    grid-template-areas: "Daniel Daniel Jo kira" 
+                        "jean patrick patrick kira" ;
+}
+.container .card {
+    padding: 25px 35px 35px 35px;
+    font-family: "Barlow Semi Condensed";
+    color: #fff;
+    height: 285px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    height: 100%;
+}
+/* the five card */
+.container .card-1 {
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x:365px;
+    grid-area:Daniel;
+}
+.container .card-2 {
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: Jo;
+}
+.container .card-3  {
+    background-color: var(--White);
+    color: black;
+    grid-area: kira;
+}
+
+.container .card-4  {
+    background-color: var(--White);
+    color: black;
+    grid-area: jean;
+}
+.container .card-5  {
+    background-color: var(--Very-dark-blackish-blue);
+    color: #fff;
+    grid-area: patrick;
+}
+/* the five card */
+.container .card .header {
+    display: flex;
+
+}
+.container .card .header img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.container .card .header .texts {
+    font-size: 13px;
+}
+.container .card  .body {
+    margin: 25px 0;
+}
+.container .card .footer span{
+    font-size: 10px;
+}
+.container .card span {
+    opacity: .5;
+}
+.container .card .footer span{
+    font-size: 13px;
+}
+.container .card h3 {
+    font-weight: 600;
+}
+.container .card p {
+    font-weight: 500;
+}
+
+
+
+/* end styling */
+@media (max-width: 575px) {
+    .container {
+        display: flex;
+    }
+    
+    }
